@@ -61,6 +61,8 @@ On the held-out test set (20,000 samples), the notebook reports **test accuracy 
 
 ![Feature importance](docs/plots/feature-importance.png)
 
+## Remodeling using XGBoost
+
 ## Installation
 
 ```bash
