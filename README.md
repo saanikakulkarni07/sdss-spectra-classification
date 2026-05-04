@@ -62,6 +62,25 @@ On the held-out test set (20,000 samples), the notebook reports **test accuracy 
 ![Feature importance](docs/plots/feature-importance.png)
 
 ## Remodeling using XGBoost
+I chose to use XGBoost because both Random Forest and XGB are in the same family, however, XGB builds trees sequentially which boosts the accuracy of the model, making it more of an informative comparison. XGB also puts more attention to samples the model gets wrong, whereas Random Forest weights all samples equally.
+
+### Accuracy
+
+With max_depth=7 and 200 estimators, XGBoost achieves 97.88% test accuracy compared to the Random Forest baseline of 97.61%, a +0.27% improvement. The 5-fold cross-validation mean is 97.72% (± 0.0017), more stable than RF's 97.39% (± 0.0026). The biggest per-class gain is on QSOs (F1: 0.9526 vs 0.9469), the hardest class due to photometric overlap with galaxies at intermediate redshifts. Of the 20,000 test samples, XGBoost correctly classifies 115 objects that RF misses, while RF only gets 63 that XGBoost misses — boosting's sequential error-correction helps most on the boundary cases (star vs galaxy comparison). 
+
+This result is statistically significant, according to McNemar's Test (p-value = 0.000132).
+
+### XGB vs RF Confusion Matrix Comparison
+
+![XGB vs RF Confusion Matrix](docs/plots/xgb_vs_rf_confusion.png)
+
+### XGB vs RF Feature Importance 
+
+![XGB vs RF Feature Importance](docs/plots/xgb_vs_rf_importance.png)
+
+### Type of Object Metrics for RF and XGB
+
+![Object Metrics](docs/plots/xgb_vs_rf_metrics.png)
 
 ## Installation
 
