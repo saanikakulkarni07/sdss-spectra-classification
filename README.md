@@ -2,7 +2,7 @@
 
 Supervised multiclass classification of astronomical objects (**star**, **galaxy**, **quasar**) from photometry and metadata similar to the Sloan Digital Sky Survey (SDSS). This repo includes a [Random Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) baseline, a small Python package layout (`main.py`, `analysis.py`), and an interactive walkthrough in `sdss_analysis.ipynb`.
 
-**Repository:** [github.com/prashantkul/sdss-spectra-classification](https://github.com/prashantkul/sdss-spectra-classification)
+**Repository:** [github.com/saanikakulkarni07/sdss-spectra-classification](https://github.com/saanikakulkarni07/sdss-spectra-classification)
 
 ## Documentation
 
